@@ -20,7 +20,10 @@ export default function Home() {
         >
           <Banner />
         </section>
-        <section id="about" className="px-10 lg:px-0 lg:pl-20 xxl:pl-96 h-full">
+        <section
+          id="about"
+          className="px-10 lg:px-0 lg:pl-20 bg-primary xxl:pl-96 h-full"
+        >
           <About />
         </section>
         <section id="+desc">
