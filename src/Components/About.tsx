@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <div className="grid py-10 lg:py-20">
+    <div className="grid py-10 lg:py-20 bg-transparent">
       {" "}
       <div className="lg:grid-cols-2 grid xxl:grid-cols-3">
         <div className="h-full hidden lg:flex lg:justify-center lg:items-center">

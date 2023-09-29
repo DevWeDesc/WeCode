@@ -6,7 +6,7 @@ import ImageOnboarding from "@/image/ImageRigthOnboargding.png";
 
 export const OnBoardingSection = () => {
   return (
-    <div className="space-y-10 pt-10 lg:space-y-0">
+    <div className="space-y-10 bg-transparent pt-10 lg:space-y-0">
       {" "}
       <WeOnboarding
         colorButton="#DC2626"

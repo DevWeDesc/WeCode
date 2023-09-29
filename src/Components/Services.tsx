@@ -27,7 +27,7 @@ export const Services = () => {
 
   return (
     <div>
-      <div className="w-full pb-6 flex flex-col items-center">
+      <div className="w-full pb-6 bg-transparent flex flex-col items-center">
         <h3 className="pb-6 w-full text-center text-4xl xxl:text-5xl font-mono ">
           Nossos Serviços
         </h3>{" "}
