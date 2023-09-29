@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <div className="grid py-10 lg:py-20 bg-transparent">
+    <div className="grid py-10 lg:py-20 bg-primary">
       {" "}
       <div className="lg:grid-cols-2 grid xxl:grid-cols-3">
         <div className="h-full hidden lg:flex lg:justify-center lg:items-center">
@@ -32,7 +32,7 @@ export const About = () => {
           ))}
         </div>
       </div>
-      <div className="grid md:grid-cols-2 mt-10  lg:pb-0  lg:pr-20 xxl:grid-cols-2  xxl:pr-96 gap-8">
+      <div className="grid md:grid-cols-2 mt-10 lg:pb-0 bg-primary lg:pr-20 xxl:grid-cols-2 xxl:pr-96 gap-8">
         {AboutDataCards.map((data, index) => (
           <div
             className="p-10 bg-gray-700  rounded-2xl brightness-90 transition-all hover:brightness-100 hover:shadow-2xl hover:shadow-gray-600"
