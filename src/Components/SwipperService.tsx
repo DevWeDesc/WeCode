@@ -10,6 +10,7 @@ import Logo from "@/image/Desc-Logo-Branco 1.png";
 import { ISwiperService } from "@/interfaces/interface";
 import { SwiperData } from "@/data/Data";
 import Link from "next/link";
+import { Skeleton } from "./ui/skeleton";
 
 export const SwipperService = ({ quantitySlides }: ISwiperService) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +57,16 @@ export const SwipperService = ({ quantitySlides }: ISwiperService) => {
               <h2 className=" px-5 text-3xl xxl:text-4xl font-mono min-h-[68.4px] xxl:min-h-[136px]">
                 {swiper.title}
               </h2>
-              <Image src={swiper.image} className="object-scale-down" alt="" />
+              {!swiper.image && (
+                <Skeleton className="w-full min-h-[174px] bg-gray-600" />
+              )}
+              {swiper.image && (
+                <Image
+                  src={swiper.image}
+                  className="object-scale-down"
+                  alt=""
+                />
+              )}
               <p className="px-5">{swiper.description}</p>
             </div>
 
