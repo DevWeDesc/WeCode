@@ -28,7 +28,7 @@ export const WeOnboarding = ({
           </button>
         </div>
       </div>
-      <div className="hidden lg:block lg:z-[-1]">
+      <div className="hidden lg:block lg:z-[2]">
         <Image
           alt="Imagem OnBoarding"
           className="object-scale-down hover:scale-105 transition-all"
