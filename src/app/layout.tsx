@@ -24,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} ${lato.variable}`}>{children}</body>
+    <html lang="en" className={`${roboto.variable} ${lato.variable}`}>
+      <body className="bg-primary text-white">{children}</body>
     </html>
   );
 }
