@@ -60,7 +60,7 @@ export const SwiperData: ISwiperData[] = [
   {
     description:
       "Seja recebido pelo luxo e elegância no nosso site de e-commerce de joias, o Brilho Eterno. Mergulhe em um mundo cintilante de joias finas e exclusivas!",
-    title: "Projeto Eleva",
+    title: "Projeto  Eleva",
     url: "https://elevav1.vercel.app/",
     image: imgeleva,
   },

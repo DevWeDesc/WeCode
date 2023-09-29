@@ -11,11 +11,11 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
+    },
+    extend: {
       screens: {
         xxl: "1700px",
       },
-    },
-    extend: {
       fontFamily: { sans: ["var(--font-lato)"], mono: ["var(--font-roboto)"] },
       colors: {
         primary: "#100216",
