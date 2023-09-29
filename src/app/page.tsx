@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col w-full">
+      <main className="flex flex-col w-full bg-primary">
         <section
           id="init"
           className="px-10 lg:px-0 lg:pl-20 xxl:pl-96 flex items-center h-screen w-full bg-[#170f18] justify-center"
