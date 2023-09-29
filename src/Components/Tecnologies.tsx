@@ -23,6 +23,8 @@ import {
 } from "react-icons/si";
 import { IDivTecnologies } from "@/interfaces/interface";
 
+const classTecnologi = ` text-5xl lg:text-6xl xxl:text-7xl transition-all`;
+
 export const Tecnologies = () => {
   return (
     <div className="grid grid-rows-1 px-10 lg:px-0 w-full pb-20">
@@ -128,8 +130,6 @@ export const Tecnologies = () => {
     </div>
   );
 };
-
-const classTecnologi = ` text-5xl lg:text-6xl xxl:text-7xl transition-all`;
 
 const DivTecnologies = ({ children, bg, color }: IDivTecnologies) => {
   const [styleDiv, setStyleDiv] = useState({

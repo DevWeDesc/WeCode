@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { SwipperService } from "./SwipperService";
-import Image from "next/image";
-import Logo from "@/image/Desc-Logo-Branco 1.png";
 import { SkeletonSwiper } from "./SkeletonSwiper";
 
 export const Services = () => {

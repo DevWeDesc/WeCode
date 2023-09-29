@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { INav } from "@/interfaces/interface";
 
 export const Nav = ({ reflink, name, onclick, selected }: INav) => {

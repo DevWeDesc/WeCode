@@ -30,7 +30,7 @@ export const WeOnboarding = ({
       </div>
       <div className="hidden lg:block lg:z-[-1]">
         <Image
-          alt=""
+          alt="Imagem OnBoarding"
           className="object-scale-down hover:scale-105 transition-all"
           src={imageRigth}
         />
