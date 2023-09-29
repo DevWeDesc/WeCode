@@ -31,7 +31,7 @@ export default function Home() {
         </section>
         <section
           id="services"
-          className="px-10 lg:px-20 lg:block xxl:px-96 py-10 h-full"
+          className="px-10 lg:px-20 lg:block xxl:px-96 bg-primary py-10 h-full"
         >
           <Services />
         </section>

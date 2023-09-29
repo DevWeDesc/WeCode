@@ -10,7 +10,7 @@ export const WeOnboarding = ({
   imageRigth,
 }: IWeOnboarding) => {
   return (
-    <div className="lg:grid bg-transparent lg:grid-cols-2 px-10 lg:px-20 xxl:px-96">
+    <div className="lg:grid bg-transparent bg-primary lg:grid-cols-2 px-10 lg:px-20 xxl:px-96">
       <div className="w-full h-full flex items-center">
         <div className="space-y-4">
           {logo != "" && <Image alt="" src={logo} />}
