@@ -1,11 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { SwipperService } from "./SwipperService";
 import { SkeletonSwiper } from "./SkeletonSwiper";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { containerAnimation } from "@/animations/AnimationsDefault";
 
 export const Services = () => {
   const [quantitySlides, setQuantitySlides] = useState(3.5);
   const [loadingSwiper, setLoadingSwiper] = useState(false);
+  const ref = useRef(null);
+  const isView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isView) {
+      mainControls.start("visible");
+    }
+  }, [isView]);
+
   useEffect(() => {
     if (window.innerWidth >= 1600) {
       setQuantitySlides(2.5);
@@ -24,7 +36,12 @@ export const Services = () => {
   }, []);
 
   return (
-    <div>
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      animate={mainControls}
+      ref={ref}
+    >
       <div className="w-full pb-6 bg-transparent flex flex-col items-center">
         <h3 className="pb-6 w-full text-center text-4xl xxl:text-5xl font-mono ">
           Nossos Serviços
@@ -45,6 +62,6 @@ export const Services = () => {
         </div>
       )}
       {loadingSwiper && <SwipperService quantitySlides={quantitySlides} />}
-    </div>
+    </motion.div>
   );
 };

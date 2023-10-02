@@ -17,17 +17,9 @@ export default function Home() {
       opacity: 1,
       y: 0,
       transition: {
-        delayChildren: 0.1,
-        staggerChildren: 0.05,
+        duration: 0.5,
+        delay: 0.25,
       },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
     },
   };
   return (

@@ -1,12 +1,31 @@
+"use client";
 import { AboutData, AboutDataCards } from "@/data/Data";
-import React from "react";
 import { MdVerified } from "react-icons/md";
 import about from "@/image/pngtree-people-working-at-home-office-picture-image_8715243.png";
 import Image from "next/image";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { containerAnimation } from "@/animations/AnimationsDefault";
 
 export const About = () => {
+  const ref = useRef(null);
+  const isView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isView) {
+      mainControls.start("visible");
+    }
+  }, [isView]);
+
   return (
-    <div className="grid py-10 lg:py-20">
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      animate={mainControls}
+      ref={ref}
+      className="grid py-10 lg:py-20"
+    >
       {" "}
       <div className="lg:grid-cols-2 grid xxl:grid-cols-3">
         <div className="h-full hidden lg:flex lg:justify-center lg:items-center">
@@ -45,6 +64,6 @@ export const About = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
