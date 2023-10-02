@@ -18,7 +18,6 @@ export const PrimaryNav: INav[] = [
   { name: "+DESC", reflink: "#+desc" },
   { name: "SERVIÇOS", reflink: "#services" },
   { name: "TECNOLOGIAS", reflink: "#tecnologies" },
-  { name: "CONTATO", reflink: "#contact" },
 ];
 
 export const SecondNav: INav[] = [

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PrimaryNav, SecondNav } from "@/data/Data";
 import { Nav } from "./Nav";
 import { INav } from "@/interfaces/interface";
+import { ModalContact } from "./ModalContact";
 
 export const Header = () => {
   const [selected, setSelected] = useState("");
@@ -71,6 +72,7 @@ export const Header = () => {
             key={index}
           />
         ))}
+        <ModalContact />
       </div>
       <div
         className={`flex flex-col ${
