@@ -2,7 +2,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { containerAnimation } from "@/animations/AnimationsDefault";
-
 import React from "react";
 import { CardSocialMedia } from "./CardSocialMedia";
 import { BsLinkedin } from "react-icons/bs";
