@@ -1,3 +1,8 @@
+"use client";
+import { useEffect, useState, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { containerAnimation } from "@/animations/AnimationsDefault";
+
 import React from "react";
 import { WeOnboarding } from "./WeOnboarding";
 import Logo from "@/image/Desc-Logo-Branco 1.png";
@@ -5,8 +10,24 @@ import ImageSecondOnboarding from "@/image/RigthOn2.png";
 import ImageOnboarding from "@/image/ImageRigthOnboargding.png";
 
 export const OnBoardingSection = () => {
+  const ref = useRef(null);
+  const isView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isView) {
+      mainControls.start("visible");
+    }
+  }, [isView]);
+
   return (
-    <div className="space-y-10 bg-transparent pt-10 lg:space-y-0">
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      animate={mainControls}
+      ref={ref}
+      className="space-y-10 bg-transparent pt-10 lg:space-y-0"
+    >
       {" "}
       <WeOnboarding
         colorButton="#DC2626"
@@ -27,6 +48,6 @@ export const OnBoardingSection = () => {
   iremos guiá-lo passo a passo "
         logo={Logo}
       />
-    </div>
+    </motion.div>
   );
 };
