@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto_Slab, Lato } from "next/font/google";
+import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
 
 const roboto = Roboto_Slab({
   subsets: ["latin"],
@@ -26,7 +28,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${lato.variable}`}>
-      <body className="bg-primary text-white">{children}</body>
+      <body className="bg-primary text-white">
+        {children}
+        <Link
+          target="_blank"
+          className="fixed"
+          href="https://api.whatsapp.com/send?phone=5511937302594&text=Estou%20interessado%20em%20pedir%20um%20orçamento!"
+          about=""
+        >
+          <BsWhatsapp className="fixed bottom-10 right-10 text-4xl z-30 cursor-pointer text-green-500 hover:text-green-600 transition-all" />
+        </Link>
+      </body>
     </html>
   );
 }
