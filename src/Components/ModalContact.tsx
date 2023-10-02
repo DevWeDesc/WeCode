@@ -20,7 +20,7 @@ export function ModalContact() {
           CONTATO
         </p>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[525px] bg-primary border-0">
+      <DialogContent className="sm:max-w-[525px] bg-[#170f18] border-0">
         <DialogHeader>
           <DialogTitle>Conecte-se com a Inovação!</DialogTitle>
           <DialogDescription>
@@ -36,7 +36,7 @@ export function ModalContact() {
             </Label>
             <Input
               id="name"
-              defaultValue="Pedro Duarte"
+              placeholder="Pedro Duarte"
               className="col-span-3"
             />
           </div>
@@ -46,7 +46,7 @@ export function ModalContact() {
             </Label>
             <Input
               id="email"
-              defaultValue="PedroDuarte@gmail.com"
+              placeholder="PedroDuarte@gmail.com"
               className="col-span-3"
             />
           </div>

@@ -1,16 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Image from "next/image";
 import Logo from "@/image/Desc-Logo-Branco 1.png";
 import { ISwiperService } from "@/interfaces/interface";
 import { SwiperData } from "@/data/Data";
 import Link from "next/link";
 import { Skeleton } from "./ui/skeleton";
+import { Navigation } from "swiper/modules";
 
 export const SwipperService = ({ quantitySlides }: ISwiperService) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,6 +25,7 @@ export const SwipperService = ({ quantitySlides }: ISwiperService) => {
   return (
     <>
       <Swiper
+        className="mySwiper"
         effect={"auto"}
         grabCursor={true}
         centeredSlides={true}
@@ -38,8 +41,8 @@ export const SwipperService = ({ quantitySlides }: ISwiperService) => {
         onSlideChange={handleSlideChange}
         spaceBetween={100}
         pagination={true}
-        navigation={true}
         modules={[EffectCoverflow, Pagination, Navigation]}
+        navigation={true}
       >
         {SwiperData.map((swiper, index) => (
           <SwiperSlide
