@@ -8,18 +8,41 @@ import { OnBoardingSection } from "@/Components/Onboardings/OnBoardingSection";
 import { Services } from "@/Components/Services";
 import { About } from "@/Components/About";
 import { Tecnologies } from "@/Components/Tecnologies";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const container = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <>
       <Header />
       <main className="flex flex-col w-full bg-primary">
-        <section
+        <motion.section
+          variants={container}
+          initial="hidden"
+          animate="visible"
           id="init"
           className="px-10 lg:px-0 lg:pl-20 xxl:pl-96 flex items-center h-screen w-full bg-[#170f18] justify-center"
         >
           <Banner />
-        </section>
+        </motion.section>
         <section
           id="about"
           className="px-10 lg:px-0 lg:pl-20 bg-primary xxl:pl-96 h-full"
