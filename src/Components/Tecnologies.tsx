@@ -1,5 +1,4 @@
 "use client";
-import React, { ReactNode, useState } from "react";
 import { MdVerified } from "react-icons/md";
 import about from "@/image/robotic-hand.png";
 import Image from "next/image";
@@ -22,12 +21,31 @@ import {
   SiMongoose,
 } from "react-icons/si";
 import { IDivTecnologies } from "@/interfaces/interface";
+import { useEffect, useState, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { containerAnimation } from "@/animations/AnimationsDefault";
 
 const classTecnologi = ` text-5xl lg:text-6xl xxl:text-7xl transition-all`;
 
 export const Tecnologies = () => {
+  const ref = useRef(null);
+  const isView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isView) {
+      mainControls.start("visible");
+    }
+  }, [isView]);
+
   return (
-    <div className="grid grid-rows-1 px-10 lg:px-0 w-full pb-20">
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      animate={mainControls}
+      ref={ref}
+      className="grid grid-rows-1 px-10 lg:px-0 w-full pb-20"
+    >
       {" "}
       <div className="xxl:grid-cols-3  lg:grid-cols-2 grid">
         <div className="flex flex-col xxl:col-span-2 h-full justify-between  py-3 space-y-3 ">
@@ -127,7 +145,7 @@ export const Tecnologies = () => {
           </DivTecnologies>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

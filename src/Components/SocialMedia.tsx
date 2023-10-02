@@ -1,3 +1,8 @@
+"use client";
+import { useEffect, useState, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { containerAnimation } from "@/animations/AnimationsDefault";
+
 import React from "react";
 import { CardSocialMedia } from "./CardSocialMedia";
 import { BsLinkedin } from "react-icons/bs";
@@ -6,8 +11,24 @@ import { AiFillYoutube } from "react-icons/ai";
 import { SlPeople } from "react-icons/sl";
 
 export const SocialMedia = () => {
+  const ref = useRef(null);
+  const isView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isView) {
+      mainControls.start("visible");
+    }
+  }, [isView]);
+
   return (
-    <div className="w-full h-full flex px-10 lg:px-0 flex-col items-center justify-center bg bg-gradient-to-br from-[#100515] via-[#073421] to-[#100515] py-32 gap-8 text-center">
+    <motion.div
+      variants={containerAnimation}
+      initial="hidden"
+      animate={mainControls}
+      ref={ref}
+      className="w-full h-full flex px-10 lg:px-0 flex-col items-center justify-center bg bg-gradient-to-br from-[#100515] via-[#073421] to-[#100515] py-32 gap-8 text-center"
+    >
       <h2 className="text-center xxl:text-5xl text-4xl font-mono">
         Nossas Redes Sociais
       </h2>
@@ -50,6 +71,6 @@ export const SocialMedia = () => {
           <SlPeople className="text-[48px]  xxl:text-[64px]" />
         </CardSocialMedia>
       </div>
-    </div>
+    </motion.div>
   );
 };
