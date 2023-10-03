@@ -52,6 +52,11 @@ export function ModalContact() {
                 placeholder="Pedro Duarte"
                 className="col-span-3"
               />
+              {errors.email && (
+                <span className="w-full text-xs text-red-600">
+                  O campo Nome é Obrigatório!
+                </span>
+              )}
             </div>
             <div className="flex flex-col items-center gap-2">
               <Label htmlFor="name" className="text-left w-full">
@@ -63,6 +68,11 @@ export function ModalContact() {
                 placeholder="PedroDuarte@gmail.com"
                 className="col-span-3"
               />
+              {errors.email && (
+                <span className="w-full text-xs text-red-600">
+                  O campo E-mail é Obrigatório!
+                </span>
+              )}
             </div>
             <div className="flex flex-col items-center gap-2">
               <Label htmlFor="username" className="text-left w-full">
