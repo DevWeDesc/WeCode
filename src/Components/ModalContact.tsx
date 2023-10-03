@@ -90,7 +90,7 @@ export function ModalContact() {
             </div>
           </div>
 
-          <DialogFooter>
+          <DialogFooter className="gap-2">
             <Button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 transition-all"
@@ -101,7 +101,7 @@ export function ModalContact() {
             <DialogTrigger>
               <Button
                 type="submit"
-                className="bg-red-500 hover:bg-red-600 transition-all"
+                className="bg-red-500 w-full hover:bg-red-600 transition-all"
               >
                 Cancelar
               </Button>
