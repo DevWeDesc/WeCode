@@ -1,3 +1,4 @@
+import { IInputs } from "@/interfaces/interface";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -12,8 +13,17 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 export function ModalContact() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<IInputs>();
+
+  const onSubmit: SubmitHandler<IInputs> = (data) => console.log(data);
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -30,50 +40,64 @@ export function ModalContact() {
             transformação digital!
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="flex flex-col items-center gap-2">
-            <Label htmlFor="name" className="text-left w-full">
-              Nome
-            </Label>
-            <Input
-              id="name"
-              placeholder="Pedro Duarte"
-              className="col-span-3"
-            />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="grid gap-4 py-4">
+            <div className="flex flex-col items-center gap-2">
+              <Label htmlFor="name" className="text-left w-full">
+                Nome
+              </Label>
+              <Input
+                {...register("name", { required: true })}
+                id="name"
+                placeholder="Pedro Duarte"
+                className="col-span-3"
+              />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Label htmlFor="name" className="text-left w-full">
+                E-mail
+              </Label>
+              <Input
+                {...register("email", { required: true })}
+                id="email"
+                placeholder="PedroDuarte@gmail.com"
+                className="col-span-3"
+              />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Label htmlFor="username" className="text-left w-full">
+                Mensagem
+              </Label>
+              <Textarea
+                {...register("content", { required: true })}
+                placeholder="Coloque o Conteúdo da sua mensagem aqui!"
+              />
+              {errors.content && (
+                <span className="w-full text-xs text-red-600">
+                  O campo Mensagem é Obrigatório!
+                </span>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <Label htmlFor="name" className="text-left w-full">
-              E-mail
-            </Label>
-            <Input
-              id="email"
-              placeholder="PedroDuarte@gmail.com"
-              className="col-span-3"
-            />
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <Label htmlFor="username" className="text-left w-full">
-              Mensagem
-            </Label>
-            <Textarea placeholder="Coloque o Conteúdo da sua mensagem aqui!" />
-          </div>
-        </div>
-        <DialogFooter>
-          <Button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-600 transition-all"
-          >
-            Enviar E-mail
-          </Button>
-          <DialogTrigger>
+
+          <DialogFooter>
             <Button
               type="submit"
-              className="bg-red-500 hover:bg-red-600 transition-all"
+              className="bg-blue-500 hover:bg-blue-600 transition-all"
             >
-              Cancelar
+              Enviar E-mail
             </Button>
-          </DialogTrigger>
-        </DialogFooter>
+
+            <DialogTrigger>
+              <Button
+                type="submit"
+                className="bg-red-500 hover:bg-red-600 transition-all"
+              >
+                Cancelar
+              </Button>
+            </DialogTrigger>
+          </DialogFooter>
+        </form>
       </DialogContent>
     </Dialog>
   );

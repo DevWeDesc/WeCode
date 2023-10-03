@@ -49,3 +49,9 @@ export interface IDivTecnologies {
 export interface ISkeletonSwiper {
   scale?: string;
 }
+
+export interface IInputs {
+  name: string;
+  email: string;
+  content: string;
+}
