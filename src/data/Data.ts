@@ -11,7 +11,7 @@ import imgwine from "@/image/imgWineFull.png";
 import imgcooper from "@/image/imgCoopertrans.png";
 import imgquality from "@/image/imgquality.png";
 import imgumicore from "@/image/imgumicore.png";
-import imgeleva from "@/image/imgEleva.png";
+import imgeleva from "@/image/imgEleva2.png";
 import imgcarioca from "@/image/imgArena.png";
 
 export const PrimaryNav: INav[] = [
