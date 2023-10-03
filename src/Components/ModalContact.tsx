@@ -11,6 +11,7 @@ import {
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
+import emailjs from "@emailjs/browser";
 
 export function ModalContact() {
   return (
