@@ -72,23 +72,16 @@ export const SwipperService = ({ quantitySlides }: ISwiperService) => {
               <p className="px-5">{swiper.description}</p>
             </div>
 
-            <div className="py-4 mt-4 w-full flex justify-between items-center border-t-2 border-white">
-              <div>
-                <strong className="min-w-full pl-10 brightness-150 text-[12px]">
-                  Data da Entrega
-                </strong>
-                <p className="pl-10 text-[13px]">
-                  {swiper.date ? swiper.date : "Em progresso..."}
-                </p>
-              </div>
+            <div className="py-4 mt-4 w-full flex justify-center items-center border-t-2 border-white">
               <Link
+                className="w-full px-8"
                 target="_blank"
                 title={`Link para o site da empresa ${swiper.title.substring(
                   8
                 )}`}
                 href={swiper.url}
               >
-                <button className="mr-10 border-[1px] text-[13px] py-2 px-6 rounded-2xl border-red-600 hover:border-[2px] transition-all">
+                <button className=" border-[1px] w-full text-[13px] py-2 px-6 rounded-2xl border-red-600 hover:border-[2px] transition-all">
                   Veja Mais
                 </button>
               </Link>

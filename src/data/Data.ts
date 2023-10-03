@@ -15,7 +15,7 @@ import imgeleva from "@/image/imgEleva.png";
 
 export const PrimaryNav: INav[] = [
   { name: "QUEM SOMOS", reflink: "#about" },
-  { name: "+DESC", reflink: "#+desc" },
+  { name: "+WEDESC", reflink: "#+desc" },
   { name: "SERVIÇOS", reflink: "#services" },
   { name: "TECNOLOGIAS", reflink: "#tecnologies" },
 ];
@@ -59,7 +59,7 @@ export const SwiperData: ISwiperData[] = [
   {
     description:
       "Seja recebido pelo luxo e elegância no nosso site de e-commerce de joias, o Brilho Eterno. Mergulhe em um mundo cintilante de joias finas e exclusivas!",
-    title: "Projeto  Eleva",
+    title: "Projeto E-commerce",
     url: "https://elevav1.vercel.app/",
     image: imgeleva,
   },
@@ -103,14 +103,14 @@ export const SwiperData: ISwiperData[] = [
   {
     description:
       "Intranet inteligente: conectando equipes, acelerando projetos e aprimorando a colaboração. Simples, ágil e produtivo.",
-    title: "Projeto Quality Fix",
+    title: "Projeto Notícias",
     url: "https://quality-fix-intra-gamma.vercel.app/",
     image: imgquality,
   },
   {
     description:
       "Modernizamos nosso ambiente corporativo com um E-commerce interno, otimizando processos e impulsionando a eficiência.",
-    title: "Projeto Umicore",
+    title: "Projeto E-commerce",
     url: "https://umicore.vercel.app/",
     image: imgumicore,
   },

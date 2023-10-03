@@ -31,7 +31,7 @@ export const WeOnboarding = ({
       <div className="hidden lg:block lg:z-[2]">
         <Image
           alt="Imagem OnBoarding"
-          className="object-scale-down transition-all"
+          className="object-contain w-[80%] transition-all"
           src={imageRigth}
         />
       </div>
