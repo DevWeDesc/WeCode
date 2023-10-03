@@ -76,7 +76,7 @@ export function ModalContact() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <p className="ml-10 text-[12px] pt-2 brightness-50 cursor-pointer hover:brightness-90 transition-all">
+        <p className="w-full text-[16px] xl:mb-2 lg:text-xs pt-2 brightness-50 cursor-pointer hover:brightness-90 transition-all">
           CONTATO
         </p>
       </DialogTrigger>

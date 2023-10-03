@@ -10,6 +10,11 @@ import { ModalContact } from "./ModalContact";
 export const Header = () => {
   const [selected, setSelected] = useState("");
   const [openHamburguer, setOpenHamburguer] = useState(false);
+  const ulStyle =
+    "ml-12 md:mr-5 xl:mr-0 flex w-full text-md gap-6 pt-2 lg:text-xs";
+  const liStyle =
+    "xl:w-full transition-all hover:border-[white] hover:brightness-90 py-2 xl:py-0 border-b-[0px] border-[black]";
+
   return (
     <header
       className={`${
@@ -72,7 +77,11 @@ export const Header = () => {
             key={index}
           />
         ))}
-        <ModalContact />
+        <ul className={ulStyle}>
+          <li className={liStyle}>
+            <ModalContact />
+          </li>{" "}
+        </ul>
       </div>
       <div
         className={`flex flex-col ${
