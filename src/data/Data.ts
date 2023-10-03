@@ -12,6 +12,7 @@ import imgcooper from "@/image/imgCoopertrans.png";
 import imgquality from "@/image/imgquality.png";
 import imgumicore from "@/image/imgumicore.png";
 import imgeleva from "@/image/imgEleva.png";
+import imgcarioca from "@/image/imgArena.png";
 
 export const PrimaryNav: INav[] = [
   { name: "QUEM SOMOS", reflink: "#about" },
@@ -113,6 +114,13 @@ export const SwiperData: ISwiperData[] = [
     title: "Projeto E-commerce",
     url: "https://umicore.vercel.app/",
     image: imgumicore,
+  },
+  {
+    description:
+      "Um site atraente e funcional para uma arena de beach tennis, impulsionando reservas e visibilidade online.",
+    title: "Projeto Arena Carioca",
+    url: "https://carioca-arena.vercel.app/",
+    image: imgcarioca,
   },
 ];
 
