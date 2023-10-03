@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-//import "swiper/css/pagination";
 import "../styles/Swiper.css";
 import Image from "next/image";
 import Logo from "@/image/Desc-Logo-Branco 1.png";

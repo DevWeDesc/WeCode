@@ -16,7 +16,6 @@ import emailjs from "@emailjs/browser";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
 
 export function ModalContact() {
   const {
@@ -25,10 +24,6 @@ export function ModalContact() {
     setValue,
     formState: { errors },
   } = useForm<IInputs>();
-
-  const [validationSubmit, setValidationSubmit] = useState(false);
-
-  console.log(validationSubmit);
 
   const onSubmit: SubmitHandler<IInputs> = (data) => {
     const templateParams = {

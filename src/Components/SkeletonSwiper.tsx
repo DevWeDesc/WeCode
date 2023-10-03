@@ -1,6 +1,3 @@
-import Image from "next/image";
-import React from "react";
-import Logo from "@/image/Desc-Logo-Branco 1.png";
 import { ISkeletonSwiper } from "@/interfaces/interface";
 import { Skeleton } from "./ui/skeleton";
 

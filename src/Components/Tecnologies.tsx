@@ -160,15 +160,12 @@ const DivTecnologies = ({ children, bg, color }: IDivTecnologies) => {
   const handleStyle = () => {
     if (bg != "" || continueStyle) {
       setStyleDiv({ backgroundColor: bg, color: color, filter: "" });
-      // setContinueStyle(true);
-      //continueStyle ? setContinueStyle(false) : null;
     } else {
       setStyleDiv({
         filter: "brightness(1.5)",
         backgroundColor: "",
         color: "",
       });
-      //setContinueStyle(false);
     }
   };
   const handleStyleDisable = () => {
@@ -176,7 +173,6 @@ const DivTecnologies = ({ children, bg, color }: IDivTecnologies) => {
       null;
     } else {
       setStyleDiv({ backgroundColor: "", filter: "", color: "" });
-      //setContinueStyle(false);
     }
   };
 
