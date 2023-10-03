@@ -53,5 +53,5 @@ export interface ISkeletonSwiper {
 export interface IInputs {
   name: string;
   email: string;
-  content: string;
+  message: string;
 }

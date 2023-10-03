@@ -9,6 +9,7 @@ import { Services } from "@/Components/Services";
 import { About } from "@/Components/About";
 import { Tecnologies } from "@/Components/Tecnologies";
 import { motion } from "framer-motion";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const container = {
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <ToastContainer />
       <main className="flex flex-col w-full bg-primary">
         <motion.section
           variants={container}

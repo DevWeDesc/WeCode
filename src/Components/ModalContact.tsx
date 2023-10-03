@@ -14,16 +14,65 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import emailjs from "@emailjs/browser";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 export function ModalContact() {
   const {
     register,
     handleSubmit,
-    watch,
+    setValue,
     formState: { errors },
   } = useForm<IInputs>();
 
-  const onSubmit: SubmitHandler<IInputs> = (data) => console.log(data);
+  const [validationSubmit, setValidationSubmit] = useState(false);
+
+  console.log(validationSubmit);
+
+  const onSubmit: SubmitHandler<IInputs> = (data) => {
+    const templateParams = {
+      from_name: data.name,
+      message: data.message,
+      email: data.email,
+    };
+    emailjs
+      .send(
+        "service_4llz5kn",
+        "template_ehdq0ys",
+        templateParams,
+        "6Dp1SAvko-GUc3-AQ"
+      )
+      .then(
+        () => {
+          toast.success("E-mail Enviado com Sucesso!!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          setValue("name", "");
+          setValue("email", "");
+          setValue("message", "");
+        },
+        () => {
+          toast.error("Falha ao enviar E-mail, tente novamente mais tarde!!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      );
+  };
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -49,8 +98,7 @@ export function ModalContact() {
               <Input
                 {...register("name", { required: true })}
                 id="name"
-                placeholder="Pedro Duarte"
-                className="col-span-3"
+                placeholder="Vinicius Henrique"
               />
               {errors.email && (
                 <span className="w-full text-xs text-red-600">
@@ -65,8 +113,7 @@ export function ModalContact() {
               <Input
                 {...register("email", { required: true })}
                 id="email"
-                placeholder="PedroDuarte@gmail.com"
-                className="col-span-3"
+                placeholder="ExemploVinicius@gmail.com"
               />
               {errors.email && (
                 <span className="w-full text-xs text-red-600">
@@ -79,25 +126,25 @@ export function ModalContact() {
                 Mensagem
               </Label>
               <Textarea
-                {...register("content", { required: true })}
+                {...register("message", { required: true })}
                 placeholder="Coloque o Conteúdo da sua mensagem aqui!"
               />
-              {errors.content && (
+              {errors.message && (
                 <span className="w-full text-xs text-red-600">
                   O campo Mensagem é Obrigatório!
                 </span>
               )}
             </div>
           </div>
-
           <DialogFooter className="gap-2">
-            <Button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-600 transition-all"
-            >
-              Enviar E-mail
-            </Button>
-
+            <DialogTrigger>
+              <Button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-600 transition-all"
+              >
+                Enviar E-mail
+              </Button>
+            </DialogTrigger>
             <DialogTrigger>
               <Button
                 type="submit"
