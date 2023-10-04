@@ -37,14 +37,14 @@ export const Footer = () => {
         <div className="flex items-center gap-4">
           <Link
             target="_blank"
-            title="link para o Linkedin da WeDesc"
+            title="link para o Linkedin da WeDescCode"
             href="https://www.linkedin.com/company/wedesctecnologia/"
           >
             <FaLinkedinIn className="text-4xl  hover:bg-blue-500 p-1 hover:p-2 rounded-md transition-all" />
           </Link>
           <Link
             className="flex justify-center items-center"
-            title="link para o Facebook da WeDesc"
+            title="link para o Facebook da WeDescCode"
             target="_blank"
             href="https://www.youtube.com/@WeDesc."
           >
@@ -52,7 +52,7 @@ export const Footer = () => {
             <FaYoutube className="text-4xl hover:text-red-500 p-0 hover:p-[2px] bg-black hover:bg-transparent rounded-md transition-all" />
           </Link>
           <Link
-            title="link para o Instagram da WeDesc"
+            title="link para o Instagram da WeDescCode"
             target="_blank"
             href="https://www.instagram.com/we.desc/"
           >

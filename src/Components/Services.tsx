@@ -47,7 +47,7 @@ export const Services = () => {
           Nossos Serviços
         </h3>{" "}
         <p className="text-center max-w-[800px] brightness-75 leading-relaxed hover:brightness-100 transition-all">
-          Na vanguarda da inovação tecnológica, a WeDesc é sua parceira de
+          Na vanguarda da inovação tecnológica, a WeDescCode é sua parceira de
           confiança para soluções de desenvolvimento de sistemas que impulsionam
           a transformação digital. Oferecemos uma gama abrangente de serviços,
           projetados para atender às necessidades únicas do seu negócio e

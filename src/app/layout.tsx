@@ -16,9 +16,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "WeCode",
+  title: "WeDescCode",
   description:
-    "WeCode - Soluções para tecnologia em desenvolvimento de sistemas!",
+    "WeDescCode - Soluções para tecnologia em desenvolvimento de sistemas!",
   robots: { follow: true, index: true },
   verification: {
     google: "kpMUX9_YimEwJTMlkY7EP8ovIjp0s-4pb5NMRzzhno0",

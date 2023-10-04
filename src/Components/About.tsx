@@ -32,9 +32,9 @@ export const About = () => {
           <Image alt="" src={about} className="object-scale-down" />
         </div>
         <div className="lg:px-12 py-6 xxl:py-0 space-y-3 xxl:col-span-2 xxl:pr-96">
-          <h2 className="w-full flex text-3xl md:text-4xl font-mono">
-            Somos a WeDesc!
-          </h2>
+          <span className="w-full flex text-3xl md:text-4xl font-mono">
+            Somos a <h1 className="ml-2">WeDescCode</h1>!
+          </span>
           <p className="text-xl font-mono">
             Software personalizado para sua empresa!
           </p>

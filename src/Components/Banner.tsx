@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Banner = () => {
   const text =
-    " Mantenha o foco no seu negócio, enquanto a WeDesc cuida da sua T.I";
+    "Mantenha o foco no seu negócio, enquanto a WeDescCode cuida da sua T.I";
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
