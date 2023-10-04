@@ -44,7 +44,7 @@ export const Banner = () => {
       <Image
         alt=""
         src={BannerImage}
-        className="absolute right-0 lg:object-contain  hidden md:block lg:block  top-3 xl:top-16  xxl:top-0 h-screen"
+        className="absolute hidden md:block lg:block right-0 top-3 xl:top-16 xxl:bottom-0 xxl:h-screen h-screen"
       ></Image>
     </div>
   );
