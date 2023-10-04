@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import BannerImage from "@/image/imgBanner.png";
+import BannerImage from "@/image/image (7) 1 (1).svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,7 +44,7 @@ export const Banner = () => {
       <Image
         alt=""
         src={BannerImage}
-        className="absolute hidden md:block lg:block right-0 top-3 xl:top-16 xxl:bottom-0 xxl:h-screen h-screen"
+        className="absolute xl:h-[94vh] hidden md:block right-0 top-3 xl:top-16 xxl:top-1/2 xxl:bottom-1/2 xxl:-translate-y-1/2 object-contain"
       ></Image>
     </div>
   );

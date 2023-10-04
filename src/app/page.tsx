@@ -33,7 +33,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           id="init"
-          className="px-10 lg:px-0 lg:pl-20 xxl:pl-96 flex items-center h-screen w-full bg-[#170f18] justify-center"
+          className="px-10 lg:px-0 lg:pl-20 xxl:pl-96 flex items-center h-[94vh] w-full bg-[#170f18] justify-center"
         >
           <Banner />
         </motion.section>
