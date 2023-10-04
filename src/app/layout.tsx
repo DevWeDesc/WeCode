@@ -38,7 +38,7 @@ export default function RootLayout({
           target="_blank"
           className="fixed"
           href="https://api.whatsapp.com/send?phone=5511937302594&text=Estou%20interessado%20em%20pedir%20um%20orçamento!"
-          about=""
+          title="Link para Entrar em contato com o WhatsApp de Orçamentos"
         >
           <BsWhatsapp className="fixed bottom-10 right-10 text-4xl z-30 cursor-pointer text-green-500 hover:text-green-600 transition-all" />
         </Link>
