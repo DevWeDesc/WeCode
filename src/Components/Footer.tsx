@@ -16,9 +16,8 @@ export const Footer = () => {
           {" "}
           <h3 className="text-lg font-mono">MAPA DO SITE</h3>
           {FooterDataMap.map((data, index) => (
-            <p key={index}>
-              {" "}
-              <a href={data.url}>{data.name}</a>
+            <p className="cursor-pointer" key={index}>
+              {data.name}
             </p>
           ))}
         </div>
@@ -27,9 +26,8 @@ export const Footer = () => {
         {" "}
         <h3 className="text-lg font-mono">PRECISA DE SUPORTE?</h3>
         {SupData.map((data, index) => (
-          <p key={index}>
-            {" "}
-            <a href={data.url}>{data.name}</a>
+          <p className="cursor-pointer" key={index}>
+            {data.name}
           </p>
         ))}
       </div>
