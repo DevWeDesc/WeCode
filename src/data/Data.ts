@@ -9,7 +9,7 @@ import imgmia from "@/image/imgMia.png";
 import imghato from "@/image/imgHato.png";
 import imgwine from "@/image/imgWineFull.png";
 import imgcooper from "@/image/imgCoopertrans.png";
-import imgquality from "@/image/imgquality.png";
+import imgquality from "@/image/quality.png";
 import imgumicore from "@/image/ecommerceu.png";
 import imgeleva from "@/image/imgEleva2.png";
 import imgcarioca from "@/image/imgArena.png";
@@ -103,7 +103,7 @@ export const SwiperData: ISwiperData[] = [
   },
   {
     description:
-      "Intranet inteligente: conectando equipes, acelerando projetos e aprimorando a colaboração. Simples, ágil e produtivo.",
+      "Conectando equipes, acelerando projetos e aprimorando a colaboração. Simples, ágil e produtivo.",
     title: "Projeto Notícias",
     url: "https://quality-fix-intra-gamma.vercel.app/",
     image: imgquality,
