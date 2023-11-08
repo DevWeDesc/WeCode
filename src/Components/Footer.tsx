@@ -1,23 +1,38 @@
-import React from "react";
+"use client";
 import Logo from "@/image/Desc-Logo-Branco 1.png";
 import Image from "next/image";
 import arrowTop from "@/image/CaretUp.png";
 import iconMap from "@/image/map-pin.png";
 import { FiInstagram } from "react-icons/fi";
 import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { FooterDataMap, SupData } from "@/data/Data";
+import { PrimaryNav, SecondNav, SupData } from "@/data/Data";
 import Link from "next/link";
 
 export const Footer = () => {
+  const formatNav = (word: string) => {
+    const primaryLetter =
+      word != "+WEDESC" ? word.substring(0, 1) : word.substring(0, 2);
+    const restLetters =
+      word != "+WEDESC"
+        ? word.substring(1).toLowerCase()
+        : word.substring(2).toLowerCase();
+    return `${primaryLetter}${restLetters}`;
+  };
+
   return (
     <footer className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:grid-cols-4 py-20 px-10 bg-primary lg:p-20 ">
       <div className="flex space-x-20">
         <div className="space-y-4">
           {" "}
           <h3 className="text-lg font-mono">MAPA DO SITE</h3>
-          {FooterDataMap.map((data, index) => (
-            <p className="cursor-pointer" key={index}>
-              {data.name}
+          {PrimaryNav.map((data, index) => (
+            <p key={index}>
+              <a href={data.reflink}>{`${formatNav(data.name)}`}</a>
+            </p>
+          ))}
+          {SecondNav.map((data, index) => (
+            <p key={index}>
+              <a href={data.reflink}>{`${formatNav(data.name)}`}</a>
             </p>
           ))}
         </div>
