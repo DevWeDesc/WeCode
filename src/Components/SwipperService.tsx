@@ -16,8 +16,6 @@ import { Navigation } from "swiper/modules";
 export const SwipperService = ({ quantitySlides }: ISwiperService) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  console.log(currentIndex);
-
   const handleSlideChange = (swiper: number | any) => {
     setCurrentIndex(swiper.realIndex);
   };
